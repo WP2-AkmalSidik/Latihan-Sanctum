@@ -14,6 +14,7 @@ Route::middleware('auth:sanctum')->group(function () {
     });
 
     Route::get('userprofile', [AuthController::class, 'profile']);
+    Route::put('update-profile', [AuthController::class, 'updateProfile']);
     Route::get('logout', [AuthController::class, 'logout']);
 
     Route::get('/transactions', [TransactionController::class, 'index']);
